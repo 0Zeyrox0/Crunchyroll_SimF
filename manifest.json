@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Crunchyroll simulcast calendar filter",
+  "version": "1.0",
+  "description": "Adds filters for the Crunchyroll simulcast calendar. Filters can be made by watchlist or language. Activating the language filter takes a moment.",
+  "permissions": ["storage", "https://www.crunchyroll.com/"],
+  "icons": {
+  "16": "icons/icon-16.png",
+  "48": "icons/icon-48.png",
+  "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.crunchyroll.com/de/simulcastcalendar*"],
+      "js": ["filter.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
